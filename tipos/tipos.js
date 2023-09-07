@@ -10,3 +10,7 @@ console.log(idade); //
 var possuiHobbies = false;
 //possuiHobbies = 1
 console.log(possuiHobbies);
+//Tipos explícitos 
+var minhaIdade;
+minhaIdade = 30;
+console.log(minhaIdade);
