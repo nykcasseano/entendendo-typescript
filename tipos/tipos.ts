@@ -17,3 +17,11 @@ console.log(possuiHobbies)
 let minhaIdade: number
 minhaIdade =  30;
 console.log(minhaIdade)
+
+//array 
+let hobbies: any[] = ["Cozinhar", "Praticar Esportes"]
+console.log(hobbies[0])
+console.log(typeof hobbies)
+hobbies = [100, 200,300]
+// hobbies =100
+console.log(hobbies);
