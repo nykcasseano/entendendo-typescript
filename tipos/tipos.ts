@@ -112,7 +112,7 @@ console.log(usuario)
 
 
 // Resposta
-
+/*
 let funcionario: {
     supervisores:string[],
     baterPonto: (horas: number) => string
@@ -130,4 +130,23 @@ let funcionario: {
 console.log(funcionario.supervisores)
 console.log(funcionario.baterPonto(8))
 console.log(funcionario.baterPonto(9))
+*/
+// Tipo especifico 
+
+type Funcionario = {
+    supervisores:string[],
+    baterPonto: (horas: number) => string
+}
+
+
+let funcionario: Funcionario = {
+    supervisores : ['Anna','Joana'],
+    baterPonto(horario: number): string{
+        if(horario <= 8){
+            return 'Ponto Normal'
+        } else {
+        return 'Fora do Horário' 
+        }
+    }
+}    
 
