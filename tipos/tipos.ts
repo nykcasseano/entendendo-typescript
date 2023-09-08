@@ -47,4 +47,9 @@ let minhaCor: Cor = Cor.Cinza;
 console.log(minhaCor)
 console.log(Cor.Laranja) 
 
+// any 
+let carro: any = 'BMW'
+console.log(carro)
+carro = { marca: 'BMW', ano:2019}
+console.log(carro)
 
