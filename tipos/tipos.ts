@@ -100,10 +100,3 @@ console.log(usuario)
 //}
 
 
-usuario = {
- name: 'Maria',
- idade: 31,
-
-}
-
-console.log(usuario)
