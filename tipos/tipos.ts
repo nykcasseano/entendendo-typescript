@@ -25,3 +25,9 @@ console.log(typeof hobbies)
 hobbies = [100, 200,300]
 // hobbies =100
 console.log(hobbies);
+
+
+// tuplas
+let endereco: [string, number, string] = ["Av Principal", 99, "casa 2"]
+
+endereco = [" Rua Principal", 99, "casa 2"]
