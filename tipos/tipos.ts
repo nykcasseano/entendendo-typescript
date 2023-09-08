@@ -58,8 +58,12 @@ console.log(carro)
 function retornaMeuNome(): string {
     return nome
 }
-
+function digaOi(): void {
+    console.log('Olá')    // sem retorno
+}
 digaOi()
+
+
 function multiplicar(numA: number, numB: number): number {
     return numA * numB  ; // o valor de retorno é opcional e pode ser omitido
 }
