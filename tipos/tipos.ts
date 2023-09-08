@@ -187,3 +187,5 @@ const produto = {
         }
     }
 }
+
+produto.validarProduto()
