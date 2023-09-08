@@ -53,3 +53,16 @@ console.log(carro)
 carro = { marca: 'BMW', ano:2019}
 console.log(carro)
 
+// funções 
+
+function retornaMeuNome(): string {
+    return nome
+}
+
+digaOi()
+function multiplicar(numA: number, numB: number): number {
+    return numA * numB  ; // o valor de retorno é opcional e pode ser omitido
+}
+
+// console.log(multiplicar(2, 'Bia'))
+console.log(multiplicar(2, 9))
