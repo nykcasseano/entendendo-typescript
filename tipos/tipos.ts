@@ -160,3 +160,12 @@ console.log(`Minha nota é ${nota}`)
 //nota = true
 
 
+// Chacando tipos
+
+let valor = 30
+
+if (typeof valor  === "number"){
+    console.log('É um number')       // type is not assignable to a boolean value
+} else {
+    console.log(typeof valor)     /// Type '"Not a number"' is not assignable to type 'never'.ts(236
+}
