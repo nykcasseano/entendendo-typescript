@@ -246,3 +246,4 @@ let correntista: Correntista = {
 
 correntista.contaBancaria.depositar(3000)
 console.log(correntista)
+
