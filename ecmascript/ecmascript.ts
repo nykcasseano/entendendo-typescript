@@ -35,7 +35,33 @@ console.log(segredo)
 function somar(n1: number, n2: number): number {
     return n1 + n2
 }
-console.log(somar(2, 2)
+console.log(somar(2, 2))
 
-const subtrair = (n1: number, n2:number): number => n1 - n2
-console.log(subtrair(2, 3))
+// const subtrair = (n1: number, n2:number): number => n1 - n2
+// console.log(subtrair(2, 3))
+
+// const saudacao =() => console.log('Olá')
+
+// const falarCom = (pessoa: string) => console.log('Olá', + pessoa)
+// falarCom('Joao')
+
+// this
+
+// function normalComThis() {
+//     console.log(this)
+// }
+// normalComThis()
+
+// const normalComThisEspecial = normalComThis
+//     .bind({ nome: 'Ana' })
+// normalComThisEspecial()
+
+// // this???
+// console.log(this)
+// const arrowComThis = () => console.log(this)
+// arrowComThis()
+
+// const arrowComThisEspecial = arrowComThis
+//     .bind({ nome: 'Ana' })
+// arrowComThisEspecial()
+
