@@ -149,18 +149,16 @@ Notificações: ${parseInt(notificacoes) > 9 ? '+9' : notificacoes}
 `
 console.log(boasVindas)
 console.log(`${(1+1) * 30}`)
-console.log(`Motor: ${caracteristicas[0]}`)
+console.log(`Motor: ${caracteristicas[0]}`);
+
 
 // Desafios
 // Exercicio 1
-var dobro = function(valor) {
-    return valor * 2
-}
+const dobro = (valor: number): number => valor * 2
 console.log(dobro(10))
 
 // Exercicio 2
-var dizerOla = function (nome) {
-    if (nome === undefined) { nome = 'Pessoa' }
+const dizerOla = function (nome: string = 'Pessoa'): void {
     console.log('Olá, ' + nome)
 }
 
@@ -168,24 +166,57 @@ dizerOla()
 dizerOla('Anna')
 
 // Exercicio 3
-var nums = [-3, 33, 38, 5]
+const nums = [-3, 33, 38, 5]
 // Imprimir o menor valor
-console.log('???')
+console.log(Math.min(...nums))
 
 // Exercicio 4
-var array = [55, 20]
+const array = [55, 20]
 // Adicionar todos os elementos de "nums" em array
+array.push(...nums)
 console.log(array)
 
 // Exercicio 5
-var notas = [8.5, 6.3, 9.4]
-var nota1 = notas[0]
-var nota2 = notas[1]
-var nota3 = notas[2]
+const notas = [8.5, 6.3, 9.4]
+const [nota1, nota2, nota3] = notas
 console.log(nota1, nota2, nota3)
 
 // Exercicio 6
-var cientista = { primeiroNome: 'Will', expeciencia: 12 }
-var primeiroNome = cientista.primeiroNome
-var expeciencia = cientista.expeciencia
+const cientista = { primeiroNome: 'Will', expeciencia: 12 }
+const {primeiroNome, expeciencia} = cientista
 console.log(primeiroNome, expeciencia)
+
+// Callback
+
+function esperar3s(callback: (dados: string) => void) {
+    setTimeout(() => {
+        callback('3s depois...')
+    }, 3000)
+}
+
+esperar3s(function(resultado: string) {
+    console.log(resultado)
+})
+
+function esperar3sPromise() {
+    return new Promise((resolve: any) => {
+        setTimeout(() => {
+            resolve('3s depois promie...')
+        }, 3000)
+    })
+}
+
+esperar3sPromise()
+    .then((dado: any) => console.log(dado))
+
+fetch('https://swapi.dev/api/people/1')
+    .then(res => res.json())
+    .then(personagem => personagem.films)
+    .then(films => fetch(films[0]))
+    .then(resFilm => resFilm.json())
+    .then(filme => console.log(filme.title))
+    .catch(err => console.log('Catch!!!!' + err))
+
+
+
+    
