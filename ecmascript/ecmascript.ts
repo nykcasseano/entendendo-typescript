@@ -78,7 +78,6 @@ function contagemRegressiva(inicio: number = 5,
 
 contagemRegressiva()
 contagemRegressiva(5)
-
 // Rest & Spread
 const numbers = [1, 10, 99, -5, 200, 1034]
 console.log(Math.max(...numbers))
@@ -139,3 +138,54 @@ const { nome:n, preco: p, caracteristicas: { w } } = item
 console.log(n)
 console.log(p)
 console.log(w)
+
+const usuarioID: string = 'SuporteCod3r'
+const notificacoes: string = '19'
+// const boasVindas = 'Boas vindas ' + usuarioID + 
+//      'Notificações: ' + notificacoes
+const boasVindas = `
+Boas vindas ${usuarioID},
+Notificações: ${parseInt(notificacoes) > 9 ? '+9' : notificacoes}
+`
+console.log(boasVindas)
+console.log(`${(1+1) * 30}`)
+console.log(`Motor: ${caracteristicas[0]}`)
+
+// Desafios
+// Exercicio 1
+var dobro = function(valor) {
+    return valor * 2
+}
+console.log(dobro(10))
+
+// Exercicio 2
+var dizerOla = function (nome) {
+    if (nome === undefined) { nome = 'Pessoa' }
+    console.log('Olá, ' + nome)
+}
+
+dizerOla()
+dizerOla('Anna')
+
+// Exercicio 3
+var nums = [-3, 33, 38, 5]
+// Imprimir o menor valor
+console.log('???')
+
+// Exercicio 4
+var array = [55, 20]
+// Adicionar todos os elementos de "nums" em array
+console.log(array)
+
+// Exercicio 5
+var notas = [8.5, 6.3, 9.4]
+var nota1 = notas[0]
+var nota2 = notas[1]
+var nota3 = notas[2]
+console.log(nota1, nota2, nota3)
+
+// Exercicio 6
+var cientista = { primeiroNome: 'Will', expeciencia: 12 }
+var primeiroNome = cientista.primeiroNome
+var expeciencia = cientista.expeciencia
+console.log(primeiroNome, expeciencia)
