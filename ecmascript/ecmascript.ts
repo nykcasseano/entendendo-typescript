@@ -79,7 +79,6 @@ function contagemRegressiva(inicio: number = 5,
 contagemRegressiva()
 contagemRegressiva(5)
 
-
 // Rest & Spread
 const numbers = [1, 10, 99, -5, 200, 1034]
 console.log(Math.max(...numbers))
@@ -97,3 +96,46 @@ const numeros = retornarArray(1, 2, 4, 5, 6, 345, 623)
 console.log(numeros)
 console.log(retornarArray(...numbers))
 
+// Rest & Spread (Tupla)
+const tupla: [number, string, boolean] = [1, 'abc', false]
+
+function tuplaParam1(a: number, b: string, c: boolean): void {
+    console.log(`1) ${a} ${b} ${c}`)
+}
+
+tuplaParam1(...tupla)
+
+function tuplaParam2(...params: [number, string, boolean]) {
+    // console.log(Array.isArray(params))
+    console.log(`2) ${params[0]} ${params[1]} ${params[2]}`)
+}
+
+tuplaParam2(...tupla)
+
+// Destructuring (array)
+const caracteristicas = ['Motor Zetec 1.8', 2020]
+// const motor = caracteristicas[0]
+// const ano = caracteristicas[1]
+
+const [motor, ano] = caracteristicas
+console.log(motor)
+console.log(ano)
+
+// Destructuring (objeto)
+const item = {
+    nome: 'SSD 480GB',
+    preco: 200,
+    caracteristicas: {
+        w: 'Importado'
+    }
+}
+
+const nomeItem = item.nome
+const precoItem = item.preco
+console.log(nomeItem)
+console.log(precoItem)
+
+const { nome:n, preco: p, caracteristicas: { w } } = item
+console.log(n)
+console.log(p)
+console.log(w)
